@@ -88,14 +88,3 @@ body {
     scale: 100%;
   }
 }
-
-
-@media screen and  (max-width:500px){
-  
-  .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-    gap: 4rem;
-    padding: 4rem;
-  }
-}
