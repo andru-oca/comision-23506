@@ -1,0 +1,82 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-image: url("https://cdn.hswstatic.com/gif/space-smell-2.jpg");
+}
+
+header,
+main {
+    height: 30%;
+    color: white;
+}
+
+main {
+    opacity: 0.9;
+}
+
+footer {
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+main > * {
+    color: white;
+    opacity: 1;
+}
+
+.output + .anexo {
+    font-size: 3rem;
+}
+
+main > .container__wrapper > #__header {
+    color: blue;
+}
+
+main > div {
+    color: burlywood;
+    height: 5rem;
+    font-size: 3rem;
+}
+
+div h3 {
+    color: red;
+}
+
+.bloc {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.bloc_bis {
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.75s ease-in-out;
+    flex: 1;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.bloc_bis:hover {
+    flex: 3;
+}
+
+.uno {
+    background-image: url("https://i0.wp.com/subelealtono.com/portal/wp-content/uploads/2020/06/subelealtono-nota-01-1.jpg");
+}
+
+.dos {
+    background-image: url("https://lumiere-a.akamaihd.net/v1/images/image_be473c63.jpeg");
+}
+
+.tres {
+    background-image: url("https://greekcitytimes.com/wp-content/uploads/2023/07/20230719_152410.jpg");
+}

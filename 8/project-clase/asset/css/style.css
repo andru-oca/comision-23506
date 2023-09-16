@@ -1,0 +1,23 @@
+@import url("./body.style.css");
+@import url("./main.style.css");
+@import url("./scale.animation.css");
+
+:root {
+  --border: 10px solid blue;
+  --heigth-value: 300svh;
+  /*theme dark*/
+
+  --bg: #111;
+  --fg: #fff;
+
+  /*theme ligth*/
+  /* 
+  --fg: #111;
+  --bg: #fff; */
+}
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+}

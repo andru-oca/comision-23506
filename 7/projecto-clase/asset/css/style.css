@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&family=Tilt+Prism&display=swap');import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&family=Tilt+Prism&display=swap');import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&family=Tilt+Prism&display=swap');import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&family=Tilt+Prism&display=swap");
+
+@import url("./header.style.css");
+@import url("./info.style.css");
+
+:root {
+  --font-customd-family: "Tilt Prism", cursive;
+  --font-custom2-family: "Rajdhani", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+
+  height: 100svh;
+
+  box-sizing: border-box;
+}

@@ -1,0 +1,15 @@
+body {
+  height: var(--heigth-value);
+  border: var(--border);
+  box-sizing: border-box;
+
+  font-size: system-ui;
+}
+
+header,
+main,
+footer {
+  height: calc(1 / 3 * 100%);
+  border: var(--border);
+  box-sizing: border-box;
+}

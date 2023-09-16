@@ -1,0 +1,48 @@
+@import url("./divs.style.css");
+
+main > div > h1 {
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+body q {
+  color: #999;
+}
+
+h1 + p {
+  color: aqua;
+}
+
+h1 ~ p:hover {
+  color: peru;
+}
+
+h1 ~ p {
+  color: aqua;
+  transition: color 700ms ease;
+}
+
+[value="dark"] {
+  scale: 2;
+  border: var(--border);
+}
+
+[data-color="green"] {
+  color: green;
+}
+
+h3::before {
+  content: ">>>";
+  display: block;
+  position: absolute;
+  left: 500px;
+  transition: all 1s ease-in-out;
+}
+
+h3:hover::before {
+  content: ">>>";
+  display: block;
+  position: absolute;
+  left: 200px;
+  color: red;
+}

@@ -1,0 +1,32 @@
+body {
+  height: 400svh;
+}
+
+nav {
+  background-color: lightcoral;
+  color: white;
+}
+
+/* header div {
+  border: 5px solid red;
+  height: 50px;
+} */
+
+/* [class^="col"],
+[class^="g-c"] {
+  border: 5px solid blue;
+} */
+
+.card {
+  margin: 1rem;
+  padding: 0;
+}
+
+.card-img-top {
+  margin: 0;
+  padding: 0;
+}
+
+.carrousel {
+  height: 20svh;
+}

@@ -1,0 +1,9 @@
+@keyframes sca {
+  from {
+    transform: rotateZ(560deg);
+    background-color: aqua;
+  }
+  to {
+    background-color: blueviolet;
+  }
+}

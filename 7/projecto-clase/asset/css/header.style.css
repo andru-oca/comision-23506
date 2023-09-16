@@ -1,0 +1,38 @@
+header {
+  height: 500px;
+  width: 500px;
+  /* background-color: blueviolet; */
+  /* position: fixed;
+  top: 100px; */
+}
+
+header > div {
+  width: 200px;
+  aspect-ratio: 1;
+  background-color: red;
+  border: 1px solid blue;
+}
+
+header > div:hover {
+  background-color: blueviolet;
+}
+
+div:nth-child(1) {
+  position: relative;
+  visibility: hidden;
+  z-index: -2;
+}
+
+div:nth-child(2) {
+  position: relative;
+  top: -100px;
+  left: 100px;
+  z-index: -3;
+}
+
+div:nth-child(3) {
+  position: relative;
+  top: -200px;
+  left: 200px;
+  z-index: 1;
+}
