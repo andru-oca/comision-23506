@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./asset/css/style.css" />
+        <title>JS Manejo de la DOM</title>
+    </head>
+    <body>
+        <header>
+            <a href="http://juanmirod.github.io/2019/06/24/chuleta-dom.html"
+                >PAGINA EXTRA SOBRE DOM</a
+            >
+        </header>
+        <hr />
+        <main>
+            <div class="container">
+                <div class="text">Formulario de contacto</div>
+                <form action="#" id="form-data">
+                    <div class="form-row">
+                        <div class="input-data">
+                            <input type="text" name="nombre" />
+                            <div class="underline"></div>
+                            <label for="">Nombre</label>
+                        </div>
+
+                        <div class="input-data">
+                            <input type="text" name="apellido" />
+                            <div class="underline"></div>
+                            <label for="">Apellido</label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-data">
+                            <input type="email" name="email" />
+                            <div class="underline"></div>
+                            <label for="">Em@il</label>
+                        </div>
+                        <div class="input-data">
+                            <input type="text" name="website" />
+                            <div class="underline"></div>
+                            <label for="">Website</label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-data textarea">
+                            <textarea
+                                rows="8"
+                                cols="80"
+                                name="mensaje"></textarea>
+                            <br />
+                            <div class="underline"></div>
+                            <label for="">Envianos tu mensaje</label>
+                            <br />
+                            <div class="form-row submit-btn">
+                                <div class="input-data">
+                                    <div class="inner"></div>
+                                    <input type="submit" value="submit" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </body>
+    <script src="./asset/js/index.js"></script>
+</html>
