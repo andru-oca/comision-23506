@@ -1,0 +1,38 @@
+body{
+    height: 100svh;
+
+    margin:0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body > center {
+    width: 60%;
+}
+
+body > center > div    {
+    width: 100%;
+}
+
+    .german{
+        width: 100%;
+        display: grid;
+        gap: 1rem;
+        grid-auto-rows: 8rem;
+        grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+    }
+
+    .german > div {
+        background: #666;
+        color: white;
+        border-radius: 1rem;
+        padding: 1rem;
+
+    }
+    
+
+
+.hover:hover{
+    border: 2px solid red;
+}

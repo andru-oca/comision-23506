@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <title>Vue Clase</title>
+</head>
+<body>
+    
+<center>
+    <div id="app">
+        <button @click="() => display = !display">
+            Mostrar o No mostrar
+        </button>
+        <div v-once>
+            <h1>{{message}}</h1>
+            <h2></h2>
+        </div>
+        <div v-html="saludoFormal" v-show="display">
+
+        </div>
+        <hr>
+        <button @click="() => message=message.toUpperCase()">
+            Transformar
+        </button>
+
+        <h1> {{count}}</h1>
+        <button @click="count++">
+          UP
+        </button>
+
+        <button @click="count--">
+            DOWN
+        </button>
+        <hr>
+        <div v-if="Math.random() > 0.5">
+            Now you see me
+          </div>
+          <div v-else>
+            Now you don't
+        </div>
+        <hr>
+
+        <input type="text" v-model.lazy="claseHover">
+
+        <hr>
+        <h1>{{claseHover}}</h1>
+
+        <div class="german" v-show ="display">
+            <div v-for="user in users" :class="claseHover" >
+                <p>{{user.name}}</p>
+                <code>{{user.email}}</code>
+            </div>
+        </div>
+
+    </div>
+</center>
+<!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+<script src="./asset/js/index.js" type="module"></script>
+</body>
+</html>
