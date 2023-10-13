@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VUE segunda parte</title>
+  </head>
+  <body>
+    <header></header>
+    <main id="main">
+      <div>
+        INGESTA DE PEDIDO
+        <div v-for="(valor,key) in pedido">
+          <input
+            v-if="key == 'id' ||  key == 'status' ||key == 'date'"
+            type="text"
+            :placeholder="key"
+            v-model="pedido[key]"
+            readonly
+          />
+          <input
+            v-else
+            type="text"
+            :placeholder="key"
+            v-model.lazy="pedido[key]"
+          />
+        </div>
+
+        <button @click="pedidoHandler">Agregar pedido</button>
+      </div>
+      <hr />
+      <div>
+        <p v-for="(valor,key) in pedido">{{valor}}</p>
+      </div>
+      <div>
+        <h2>Cantidad total de pedidos {{cantPedidos}}</h2>
+        <div>
+          <div v-for="pedido in listaPedidos">
+            <div :class="pedido.status?'':classInactiva">
+              <p>Nombre de pedido : {{pedido.nombrePedido}}</p>
+              <p>La hora : {{pedido.date}}</p>
+              <p>Precio del pedido: {{pedido.precio}}</p>
+              <button @click="()=>pedido.status = !pedido.status">
+                Activo/Inactivo
+              </button>
+              <button @click="deleteHandler(pedido.id)">Borrar pedido</button>
+            </div>
+            <hr />
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div>
+        <button @click="fetchHandler">Traeme los to-dos</button>
+        <div>
+          <div v-for="todo in todos" :class="todo.status?'':classInactiva">
+            <!-- <p>{{todo.title}}</p>
+            <p>todo id {{todo.id}}</p> -->
+            <todo :title="todo.title" :id="todo.id"></todo>
+            <button @click="()=>todo.status = !todo.status">
+              Activo/Inactivo
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+  <style>
+    .inactive {
+      text-decoration: line-through;
+      color: #999;
+    }
+  </style>
+  <script type="module" src="./asset/js/index.js"></script>
+</html>

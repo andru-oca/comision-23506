@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100svh;
+    display: grid;
+    gap: 2rem;
+    grid-template-areas:
+        "header header header header"
+        "main main main main"
+        "main main main main"
+        "main main main main"
+        "footer footer footer footer"
+    ;
+}
+
+
+header,
+main,
+footer {
+    margin: 0 2rem 0 2rem;
+    box-sizing: border-box;
+}
+
+header {
+    grid-area: header;
+    background-color: blueviolet;
+
+}
+
+
+
+main {
+    grid-area: main;
+    background-color: lightcoral;
+    height: 100%;
+}
+
+footer {
+    grid-area: footer;
+    background-color: lightblue;
+}
+
+
+
+/* configuracion básica de unos estilos */
+header>div {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    place-items: center;
+    padding: 1rem;
+}
+
+.logo {
+    width: 10%;
+    aspect-ratio: 1;
+    filter: invert();
+    margin-left: 2rem;
+    flex-grow: 1;
+}
+
+
+.sections {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+
+.sections li>a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.sections li {
+    list-style: none;
+}
+
+.sections li:hover {
+    scale: 1.2;
+}
+
+
+.sections li>a :link,
+.sections li>a :visited,
+.sections li>a :active {
+
+    color: white;
+}
+
+/* main */
+
+main>div {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    width: 100%;
+}
+
+main>div>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+main>div>div form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.7rem;
+}
+
+main>div>div form input {
+    text-align: center;
+    width: 100%;
+    height: 3rem;
+    font-size: 1rem;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #444;
+
+}
+
+main button {
+    width: 10rem;
+    aspect-ratio: 16/9;
+    border-radius: 1rem;
+}
+
+main>div>div form input .pedido {
+    display: grid;
+    text-align: left;
+    grid-template-areas:
+        "texto orden"
+        "elemento elemento"
+    ;
+
+
+    box-sizing: border-box;
+    place-items: center;
+
+    width: 100%;
+
+    padding: 3rem;
+    gap: 1rem;
+}
+
+
+.style__list {
+    list-style: none;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.orden {
+    grid-area: orden;
+}
+
+.texto {
+    grid-area: texto;
+}
+
+.container {
+    height: 60svh;
+    width: 100%;
+
+    overflow-y: scroll;
+    align-items: center;
+    justify-content: center;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-top: 2rem;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+
+}
+
+.elemento {
+    grid-area: elemento;
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 13rem;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    box-sizing: border-box;
+    width: 100%;
+
+}
+
+
+.elemento>div {
+    text-align: left;
+    display: grid;
+
+    border-radius: 1rem;
+    padding: 1rem;
+
+    background-color: #444;
+    color: white;
+
+    transition: all ease-in-out 500ms;
+}
+
+
+.elemento>div:hover {
+    background: white;
+    color: #444;
+    cursor: pointer
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./asset/css/style.css" />
+        <title>VUE Methods y Asincronía</title>
+    </head>
+    <body>
+        <header>
+            <div id="header">
+                <logo></logo>
+                <ul class="sections">
+                    <place
+                        v-for="section in sections"
+                        :nombre="section.nombre"
+                        :link="section.link"></place>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <div id="main">
+                <div>
+                    <h1>Programa de Gestion de Pedidos</h1>
+                    <form method="POST">
+                        <h3>FORMULARIO DE PEDIDO</h3>
+                        <div
+                            v-for="(item , index) in listaElementos"
+                            :key="index">
+                            <input
+                                v-if="item=='id' || item == 'status' || item == 'hora'"
+                                v-model.lazy="orden[item]"
+                                type="text"
+                                hidden />
+
+                            <input
+                                v-else
+                                type="text"
+                                v-model.lazy="orden[item]"
+                                :placeholder="item"
+                                ref="ordenValores" />
+                        </div>
+
+                        <button @click="agregar($event)" type="submit">
+                            Agrega Pedido
+                        </button>
+                    </form>
+                </div>
+                <div class="pedido">
+                    <div>
+                        <h2>ORDEN A AGREGAR</h2>
+                        <ul class="orden">
+                            <div v-for="(value ,key) in orden">
+                                <li
+                                    v-if="key=='id' || key == 'status' || key == 'hora'"
+                                    v-show="false"></li>
+
+                                <li v-else class="style__list">
+                                    🏳 {{key}}: {{value}}
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="container">
+                        Pedidos totales : {{ cantPedidos ?? 0}}
+                        <div class="elemento">
+                            <div
+                                v-for="orden in listaDeOrdenes"
+                                :key="orden.id"
+                                @click="deleteItem(orden.id)">
+                                <p v-for="(item,key) in orden">
+                                    {{key}}: {{item}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="footer"></div>
+        </footer>
+    </body>
+    <script src="./asset/js/index.js" type="module"></script>
+</html>
