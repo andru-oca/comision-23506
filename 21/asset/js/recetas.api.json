@@ -1,0 +1,34 @@
+[
+    {
+        "nombreReceta":"Pan dulce",
+        "img":"https://t1.uc.ltmcdn.com/es/posts/2/0/6/como_hacer_pan_dulce_35602_600.jpg",
+        "ingredientes":[{"harina":20, "frutas":10},{"harinaTrigo":30 , "algarroba":40}]
+        ,
+        "tiempoCoccion": {
+            "tiempo":40,
+            "unidad":"mins"
+        },
+        "pasos":[
+            "prender el horno",
+            "poner la masa",
+            "pinchar el pan dulce",
+            "..."
+        ]
+    },
+    {
+        "nombreReceta":"Pan Salado",
+        "img":"https://www.annarecetasfaciles.com/files/baguettes-815x458.jpg",
+        "ingredientes":[{"harina":10}]
+        ,
+        "tiempoCoccion": {
+            "tiempo":30,
+            "unidad":"mins"
+        },
+        "pasos":[
+            "prender el horno",
+            "poner la masa",
+            "pinchar el pan dulce",
+            "..."
+        ]
+    }
+]

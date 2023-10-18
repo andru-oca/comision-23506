@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./asset/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header></header>
+    <main id="main">
+      <div v-if="recetas">
+        <div v-for="receta in recetas">
+          <div v-html="receta.recipe"></div>
+        </div>
+      </div>
+      <div v-show="!recetas" class="spinner"></div>
+
+      <hr />
+      <div>
+        <button @click="recetasHandler">CARGAR RECETAS</button>
+      </div>
+      <hr />
+      <div v-show="errorRecetas != null ">
+        <h1>{{errorRecetas}}</h1>
+      </div>
+      <div v-for="receta in recetas">
+        <div>
+          <img v-bind:src="receta.img" alt="" />
+          <h1>{{receta.nombreReceta}}</h1>
+        </div>
+        <hr />
+        <h3>Ingredientes</h3>
+        <div v-for="ingredientes in receta.ingredientes">
+          <h2>Alternativa</h2>
+          <ul>
+            <li v-for="(i , valor) in ingredientes ">{{valor}} {{i}} grs</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./asset/js/index.js" type="module"></script>
+</html>
