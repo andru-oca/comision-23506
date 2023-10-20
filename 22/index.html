@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Ultima Parte</title>
+  </head>
+  <body>
+    <center>
+      <header></header>
+      <main id="main">
+        <div>
+          <p>
+            LA API A TRABAJAR: <br />
+            {{API}}
+          </p>
+          <hr />
+          <input type="url" v-model="API" />
+          <button @click="fetchDataHandler">Fetch data</button>
+        </div>
+        <div>
+          <div v-for="usuario in dataRetrieve">
+            <h3>{{usuario.name}}</h3>
+            <img
+              :src="usuario.image"
+              width="200"
+              @click="selectHandler(usuario.id)"
+            />
+            <div v-if="poolUser != null && poolUser.name == usuario.name">
+              <p>{{poolUser.name}}</p>
+              <p>{{poolUser.status}}</p>
+              <p>{{poolUser.gender}}</p>
+            </div>
+            <hr />
+            <button @click="fetchUniqueData(usuario.url)">
+              Fetch Info {{usuario.name}}
+            </button>
+
+            <hr />
+          </div>
+        </div>
+      </main>
+      <footer></footer>
+    </center>
+  </body>
+  <script src="./asset/js/index.js" type="module"></script>
+</html>
