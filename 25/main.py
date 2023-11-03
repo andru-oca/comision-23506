@@ -106,29 +106,3 @@ for year in range(2000,2100,1):
 
     if primera_condicion or segunda_condicion:
         print(f"El año: {year} es bisiesto")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
