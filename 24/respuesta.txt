@@ -1,0 +1,9 @@
+
+
+    Mi nombre completo es : juan delacroix
+
+    mi email : juan@mail.com
+    mi password : ________123	________
+
+    Mi fecha de nacimiento es : 13/03/98
+
