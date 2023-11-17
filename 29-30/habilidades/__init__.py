@@ -1,0 +1,1 @@
+from .SuperTiros import SuperTiros
