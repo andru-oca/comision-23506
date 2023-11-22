@@ -1,7 +1,7 @@
 # Sector de importacion de librerias
 from generador import generar_usuarios
 from operaciones.create import create_user
-from operaciones.read import read_user
+from operaciones.read   import read_user
 from operaciones.update import update_user
 from operaciones.delete import delete_user
 
