@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+.h2_titles {
+    color: #36A0FF;
+    font-weight: bold;
+    padding-top: 20px;
+    text-align: center;
+    margin: 10px;
+
+}
+
+/* HEADER Navbar*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #ececec;
+}
+
+.logo {
+    max-width: 10rem;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #1c1c1c;
+}
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+.banner_hero {
+    width: 100%;
+    z-index: -1;
+}
+
+/* Para PC */
+/* Sección Menús */
+
+#menus .contenedor{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}    
+    
+.carta {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+    
+.carta .textos{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* Seccion Instrucciones */
+
+#instrucciones .contenedor{
+    background-color: #ECECEC;
+    padding: 10px;
+    
+}
+
+#instrucciones .subcontenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#instrucciones .carta{
+    height: 250px;
+    width: 200px;
+    background-color: white;
+    border-radius: 10%;
+    box-shadow: 16px 14px 20px rgb(113, 112, 112, .5);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#instrucciones .carta::before{
+    content: "";
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-image: conic-gradient(#36a1ffa0 20deg, transparent 120deg);
+    animation: rotar 2s linear infinite;
+}
+
+@keyframes rotar{
+    /*Quiero que rotes desde 0 grados */
+    from{
+        transform: rotate(0deg);
+    }
+    /* hasta los -360 grados para que gire en sentido anti horario */
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+#instrucciones .carta::after{
+    content: "";
+    position: absolute;
+    height: 240px;
+    width: 190px;
+    background-color: white;
+    border-radius: 10%;
+    box-shadow: inset 16px 14px 20px rgb(254, 254, 254);
+    ;
+}
+
+#instrucciones a{
+    color: #36A0FF;
+    z-index: 2;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+#instrucciones p{
+    color: black;
+    z-index: 2;
+    background-color: transparent;
+    padding: 10px 10px 15px 15px;
+    text-align: center;
+}
+
+/*USO DE API */
+
+#instrucciones .contenedor2{
+    background-color: #ECECEC;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+#instrucciones .api{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#instrucciones button{
+    padding: 10px;
+    margin-top: 10px;
+    color:#36A0FF;
+    background-color: white;
+    border: 1px solid #36A0FF;
+    border-radius: 4px;
+    transition: all 400ms ease;
+    font-weight: bold;
+
+}
+
+#instrucciones button:hover{
+    background: #36A0FF;
+    color:#fff
+}
+
+
+/* ¿DONDE ESTAMOS? */
+
+.mapa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*CONTACTO */
+
+
+
+@media screen and (max-width: 725px) {
+    /* Mobile y Tablet */
+
+    /* HEADER : Navbar */
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu {
+        color: #1c1c1c;
+    }
+
+    .cerrar-menu {
+        color: #ececec;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1c1c1c;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        z-index: 1;
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-list li a {
+        color: #ecececec;
+    }
+}
+
+/* MAIN */
+
+/* Sección Hero */
+
+.foto {
+    width: 100%;
+}
+
+/* Sección Menús */
+#menus .contenedor{
+    padding: 0 40px 0 0;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+
+}
+
+.carta{
+    height: auto;
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, .2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.carta:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, .4);
+    transform: translateY(-3%);
+}
+
+.carta img{
+    width: 100%;
+}
+
+.carta .textos{
+    padding: 20px 15px;
+    text-align: center;
+}
+
+.carta .textos h5{
+    margin-bottom: 15px;
+}
+
+.carta .textos a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color:#36A0FF;
+    border: 1px solid #36A0FF;
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+
+.carta .textos a:hover{
+    background: #36A0FF;
+    color:#fff
+}
+
+/* Sección Preguntas Frecuentes */
+
+.bigicon {
+    font-size: 35px;
+    color: #36A0FF;
+}
+
+.item {
+    text-align: center;
+}
+
+.question {
+    background-color: #CFDBF1;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+
+.active,
+.question:hover {
+    background-color: #ccc;
+}
+
+.question:after {
+    content: "v";
+    font-size: 32px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "ʌ";
+
+}
+
+.answer {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+
+/* FOOTER */
+.pie {
+    text-align: center;
+}
+
+/* Estilos para los íconos de redes sociales */
+.social-icons {
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.iconos {
+    font-size: 40px;
+}
+
+.fa-whatsapp {
+    color: rgb(3, 233, 3);
+}
+
+.fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+}
+

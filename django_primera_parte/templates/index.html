@@ -1,0 +1,454 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="icon" href="{% static 'img/icono.ico' %}" />
+
+    <title>AlphaFood Sitio Oficial | Dietas BARF</title>
+  </head>
+
+  <body>
+    <header>
+      <img
+        class="logo"
+        src="{% static './img/0.0_logo.png' %}"
+        alt="0.0_logo"
+      />
+      <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
+
+      <nav class="nav" id="nav">
+        <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+        <ul class="nav-list">
+          <li><a href="#menus" class="nav-link">AlphaMenús</a></li>
+          <li>
+            <a href="#instrucciones" class="nav-link">¡Asi funciona Barf!</a>
+          </li>
+          <li>
+            <a href="#preguntas" class="nav-link">Preguntas Frecuentes</a>
+          </li>
+          <li><a href="#dondeEstamos" class="nav-link">Donde Estamos</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="hero">
+        <div class="contenedor">
+          <img
+            src="{% static './img/0.1_hero.png' %}"
+            class="foto"
+            alt="0.1_baner_hero"
+          />
+          <div>
+            <img
+              src="{% static './img/0.3_baner_hero.png' %}"
+              class="banner_hero"
+              alt="0.3_baner_hero"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="menus">
+        <h2 class="h2_titles">NUESTROS MENÚS</h2>
+        <div class="contenedor">
+          <div class="carta">
+            <figure>
+              <img
+                src="{% static './img/1.1_CorderoPavo.webp' %}"
+                class="menues"
+                alt="1.1_CorderoPavo"
+              />
+            </figure>
+
+            <div class="textos">
+              <h5>Cordero y Pavo</h5>
+              <a href="#">+info</a>
+            </div>
+          </div>
+
+          <div class="carta">
+            <figure>
+              <img
+                src="{% static './img/1.2_PavoSardinas.webp' %}"
+                class="menues"
+                alt="1.2_PavoSardinas"
+              />
+            </figure>
+
+            <div class="textos">
+              <h5>Pavo y Sardinas</h5>
+              <a href="#">+info</a>
+            </div>
+          </div>
+
+          <div class="carta">
+            <figure>
+              <img
+                src="{% static './img/1.3_Pollo.webp' %}"
+                class="menues"
+                alt="1.3_Pollo"
+              />
+            </figure>
+
+            <div class="textos">
+              <h5>Pollo</h5>
+              <a href="#">+info</a>
+            </div>
+          </div>
+
+          <div class="carta">
+            <figure>
+              <img
+                src="{% static './img/1.4_Pavo.webp' %}"
+                class="menues"
+                alt="1.4_Pavo"
+              />
+            </figure>
+
+            <div class="textos">
+              <h5>Pavo</h5>
+              <a href="#">+info</a>
+            </div>
+          </div>
+
+          <div class="carta">
+            <figure>
+              <img
+                src="{% static './img/1.5_PolloVaca.webp' %}"
+                class="menues"
+                alt="1.5_PolloVaca"
+              />
+            </figure>
+
+            <div class="textos">
+              <h5>Pollo y Vaca</h5>
+              <a href="#">+info</a>
+            </div>
+          </div>
+
+          <div class="carta">
+            <figure>
+              <img
+                src="{% static './img/1.6_ConejoCaballo.webp' %}"
+                class="menues"
+                alt="1.6_ConejoCaballo"
+              />
+            </figure>
+
+            <div class="textos">
+              <h5>Conejo y Caballo</h5>
+              <a href="#">+info</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="instrucciones">
+        <div class="contenedor">
+          <h2 class="h2_titles">¡ASI FUNCIONA BARF!</h2>
+          <div class="subcontenedor">
+            <div class="carta">
+              <a href="#">Elegi su menú</a>
+              <p>
+                Calculá su ración diaria y elegi el menú que mas se adapte a tu
+                peludo
+              </p>
+            </div>
+
+            <div class="carta">
+              <a href="#">Hace tu pedido</a>
+              <p>
+                Elegí el dia que queres recibir el pedido y tenete a mano el
+                congelador!
+              </p>
+            </div>
+
+            <div class="carta">
+              <a href="#"
+                >Cuidamos su <br />
+                comida</a
+              >
+              <p>
+                Conservamos la cadena de frio desde nuestro almacén hasta tu
+                casa
+              </p>
+            </div>
+
+            <div class="carta">
+              <a href="#">Descongelá y servi!!</a>
+              <p>
+                Descongela su menú 24hs antes, servi su ración y a disfrutar!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contenedor2">
+          <!-- Agrega un botón con un identificador (id) -->
+          <button id="obtenerRazaBtn">
+            Conocé quien podria ser tu próximo peludo
+          </button>
+
+          <div class="api">
+            <!-- Contenedor para mostrar la información de la raza -->
+            <div id="informacionRaza"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="preguntas">
+        <div class="contenedor">
+          <h2 class="h2_titles">PREGUNTAS FRECUENTES</h2>
+          <div class="contenedor-preguntas">
+            <button type="button" class="question">
+              <h3>Quiero darle BARF a mi perro, ¿cómo empiezo?</h3>
+            </button>
+            <p class="answer">
+              Debes empezar con el pack iniciación para hacer la transición de
+              una alimentación a la dieta BARF. La transición es necesaria para
+              adaptar el organismo del peludo a las nuevas digestiones y
+              fortalecer el sistema inmune de tu peludo. Según el tamaño y el
+              peso del perro, tienes que escoger el formato correcto del pack
+              iniciación: perro mini, perro mediano o perro grande. Junto con el
+              pack iniciación, recibirás las instrucción sobre cómo hacer la
+              transición.
+            </p>
+
+            <button type="button" class="question">
+              <h3>¿Qué cantidad de comida BARF tengo que darle?</h3>
+            </button>
+            <p class="answer">
+              Hay muchos factores que influyen en la cantidad de comida que
+              tiene que comer un perro: el tamaño, el peso, la edad, el nivel de
+              actividad, el metabolismo o si está castrado. Para facilitarte el
+              trabajo, puedes calcular la cantidad diaria a través de nuestra
+              calculadora BARF. Recuerda que es una cantidad orientativa, si tu
+              perro coge o pierde peso debes corregir las cantidades aumentando
+              o disminuyendo su ración. Las tomas se deben calcular partiendo
+              del peso ideal del perro. Si tu perro pesa 30kg, pero debería
+              pesar 25kg, debes calcular a partir de los 25kg.
+            </p>
+
+            <button type="button" class="question">
+              <h3>¿A partir de qué edad puedo darle BARF?</h3>
+            </button>
+            <p class="answer">
+              Tanto en perros como en gatos, puedes empezar a darle BARF desde
+              el mismo destete. Te aconsejamos que durante los primeros meses le
+              ofrezcas menús bajos en grasa y más asimilables como el menú de
+              pavo, conejo, pollo o pavo y vaca. Es importante que durante la
+              etapa de crecimiento, le des la cantidad adecuada y dividida en
+              las tomas diarias correctas. En el siguiente enlace, te explicamos
+              todo lo que necesitas saber sobre los cachorros: los cachorros y
+              el BARF.
+            </p>
+
+            <button class="question">
+              <h3>¿Cómo llega el producto y cómo lo conservo?</h3>
+            </button>
+            <p class="answer">
+              Todos los productos de AlphaFood se ultracongelan en nuestra
+              fábrica y se envían congelados para asegurar la calidad del
+              producto. Cuando se recibe el pedido, los menús deben conservarse
+              en el congelador y se descongelan 24h en la nevera aquellas piezas
+              que se vayan a utilizar al siguiente día. Puede conservarse en la
+              nevera sin perder propiedades hasta 3 días.
+            </p>
+
+            <button class="question">
+              <h3>¿Hay que cocinar el producto? ¿Cómo se lo doy a mi perro?</h3>
+            </button>
+            <p class="answer">
+              El producto no hay que cocinarlo, la dieta BARF se ofrece el
+              alimento crudo. Es uno de los principales beneficios de la dieta
+              natural BARF, los alimentos crudos respetan vitaminas, proteínas,
+              aminoácidos esenciales y antioxidantes. Con Natuka, solo tienes
+              que descongelar el producto en la nevera 24h antes de utilizarlo.
+              Simplemente tendrás que abrir el producto, poner la cantidad que
+              necesite tu peludo en su comedero y, ¡a disfrutar! Es recomendable
+              sacarlo media hora antes de su consumo para que esté a temperatura
+              ambiente.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="dondeEstamos">
+        <div class="contenedor">
+          <h2 class="h2_titles">¿Donde Estamos?</h2>
+          <div class="mapa">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1638.3118079354322!2d-58.27832521346123!3d-34.79024946153283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a329586a94baff%3A0x7b882936fa0ee15d!2zRm9ycmFqZXLDrWEgIkVsIEFyY2Ei!5e0!3m2!1ses!2sar!4v1698628908810!5m2!1ses!2sar"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="contacto1">
+        <div class="container">
+          <h2 class="h2_titles">Contactenos!</h2>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="well well-sm">
+                <form class="form-horizontal" method="post">
+                  <fieldset>
+                    <legend class="text-center header"></legend>
+
+                    <div class="form-group">
+                      <span class="col-md-1 col-md-offset-2 text-center"
+                        ><i class="fa fa-user bigicon"></i
+                      ></span>
+                      <div class="col-md-8">
+                        <input
+                          id="fname"
+                          name="name"
+                          type="text"
+                          placeholder="Nombre"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <span class="col-md-1 col-md-offset-2 text-center"
+                        ><i class="fa fa-user bigicon"></i
+                      ></span>
+                      <div class="col-md-8">
+                        <input
+                          id="lname"
+                          name="name"
+                          type="text"
+                          placeholder="Apellido"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <span class="col-md-1 col-md-offset-2 text-center"
+                        ><i class="bi bi-envelope bigicon"></i
+                      ></span>
+                      <div class="col-md-8">
+                        <input
+                          id="email"
+                          name="email"
+                          type="text"
+                          placeholder="Mail"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <span class="col-md-1 col-md-offset-2 text-center"
+                        ><i class="fa fa-phone-square bigicon"></i
+                      ></span>
+                      <div class="col-md-8">
+                        <input
+                          id="phone"
+                          name="phone"
+                          type="text"
+                          placeholder="Telefono"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <span class="col-md-1 col-md-offset-2 text-center"
+                        ><i class="fa fa-pencil-square-o bigicon"></i
+                      ></span>
+                      <div class="col-md-8">
+                        <textarea
+                          class="form-control"
+                          id="message"
+                          name="message"
+                          placeholder="Ingrese su mensaje aqui. Sera respondido dentro de los siguientes dos dias habiles"
+                          rows="7"
+                        ></textarea>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                          ENVIAR
+                        </button>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pie">
+      <p>Síguenos en nuestras redes sociales</p>
+      <ul class="social-icons">
+        <li>
+          <a href="https://es-la.facebook.com" target="_blank"
+            ><i class="fab fa-facebook iconos"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com" target="_blank"
+            ><i class="fab fa-instagram iconos"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://web.whatsapp.com" target="_blank"
+            ><i class="fab fa-whatsapp iconos"></i
+          ></a>
+        </li>
+      </ul>
+      <p class="container">&copy;AlphaFood</p>
+    </footer>
+
+    <script src="{% static './js/api.js' %}"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static './js/main.js' %}"></script>
+  </body>
+</html>
